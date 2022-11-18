@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+* {
+	margin:0; padding:0;
+	box-sizing:border-box;	
+}
+html, body {
+	font:11pt/180% "나눔고딕";
+	color:#222328;
+}
+img {
+	max-width:100%;
+}
+
+#layout {
+	width:600px; margin:auto;
+	border:1px solid red;
+    /*display:flex; 이거 하면 main이 header밑으로 안오고 옆으로 가짐. 하면 안됨*/
+    position: relative; /*#black 때문에 있어야함. 없으면 브라우저 맨 왼쪽에 표시됨*/
+}
+
+/*** 상단 ***/
+header {
+	background:#1d61fb; color:white;
+	padding:15px;
+	height: 80px; width: 600px;
+}
+header h1 {
+	text-align:center;
+	padding: 20px 15px;
+}
+header button:first-of-type {  /*햄버거 아이콘 class="material-icons" dehaze*/
+	float: left; /*붕 떠서 왼쪽으로 감*/
+	padding: 0;
+	background: none; border: 2px solid red;
+	color: white; /*햄버거는 글씨로 여겨짐*/
+	font-size: 2rem; font-weight: bold;
+	margin-left: 5px; margin-top: -10px;
+}
+header button:last-of-type {  /*하트아이콘*/
+	float: right;
+	padding-top: 0;
+	background: none; border: 2px solid red;
+	color: white;
+	font-size: 2rem; font-weight: bold;
+	margin-top: -3px; margin-top: -10px;
+}
+/*  상단 햄버거아이콘 내비게이션 메뉴  */
+#black {  /*상단부분 왼쪽에 있는 메뉴아이콘에 대해 적용시킴*/
+	position: absolute;  /*위로 붕 떠서 어딘가로 이동하거나, 붕 떠서 컨텐츠 위에 있는 상태가 됨*/
+	width: 100%; z-index: 1;  /*popup과 black은 부모가 다르기 때문에 popup인덱스1과 black인덱스1은 다름*/
+	background: rgba(0,0,0,0.85);
+	left: 0;  /*==>아이디가 black인 요소의 부모 요소인 header(->position설정 안돼있어서)에서 조상으로 거슬러 올라가서 position되어있는 곳까지 간 후 그 위치에서 왼쪽 0으로 설정하겠다는 의미*/
+	height: 100%;
+	display: none;  /*표시X*/
+}
+#black nav	{
+	position: relative;  /*relative하는 이유는 nav의 자식들에게 애니메이션 적용시킬 예정이기 때문*/
+	background: rgba(255, 255, 255, 0.9);
+	width: 50%;	height: 40%;
+	border-bottom-right-radius: 50px;
+	left: -61%;
+}
+#black nav ul {
+	display:flex; justify-content:space-between;
+	list-style:none  inside;
+	flex-direction: column; line-height: 400%;
+	padding-top: 20px; margin-left: 30px;
+}
+#black nav a {
+	margin-left:-3px;
+} /*** 상단 끝 ***/
+
+
+/*** 메뉴부분 ***/
+main {
+    display: flex;
+    position: relative;
+    background: #e8fbfe;
+    height: 100vh;
+}
+/***메뉴의 왼쪽***/
+#left {	
+	width: 135px;
+}
+#left ol {
+	list-style:none;
+}
+#left ol a {
+	display:block;
+	text-decoration:none;
+	text-align:center;
+}
+/*메인 메뉴*/
+#left li {
+	border-bottom:1px solid skyblue;
+}
+#left li>a {
+	background: #e8fbfe;
+	color:#1d61fb; font-size:1.2rem;
+	font-weight:bold; padding:10px;
+}
+#left li:hover>a {
+	color: #e8fbfe; background: dodgerblue;
+    font-size: 1.2rem;
+}
+/*왼쪽 메뉴 cocktail의 하위메뉴*/ 
+#left nav {
+	background: #e8fbfe;
+	padding:5px; padding-bottom:10px;
+	display:none;	
+}
+#left nav a {
+		padding:6px; color: dodgerblue;
+		font-size:1.1rem;
+}
+#left nav a:hover {
+		color: #c3f0f8;
+		font-weight:bold;
+} 
+/***메뉴의 오른쪽***/
+#right {
+    flex: 5; padding: 5px 0 0 15px; background: white;
+}
+#right section {display: flex; position: relative;}
+#right section img {flex: 1; margin: 10px; width: 60px; height: 80px;}
+#right section button {position: absolute; left: 50px; top: 75px; background: none; border: none;}
+#NnP {flex: 3; margin-top: 10px;}
+#NnP span {right: 0; margin-right: 20px; position: absolute;}
+.m>hr {width: 350px;}
+.m>span {margin-top: 10px; display: inline-block;}
+#Lv1 {display: none;}
+#Lv2 {display: none;}
+#Lv3 {display: none;}
+
+
+/*** 하단 ***/
+footer {
+	position:fixed; bottom:0;
+    background: #1d61fb;
+}
+footer>div {
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+}
+footer a { /*footer의 자손(+자식..?)인 a들에 대하여 적용*/
+	border: 2px solid blue;
+	padding: 20px 61pt; text-decoration: none;
+	color: white;
+}
+footer a.stay {
+	color: gray;
+}
+footer a:hover {
+	color: lightgray;
+}
+
+/*TOP 아이콘  =>html에서 가려놓음*/
+footer + a {  /*footer의 형제인 a에 대해서 적용*/
+	position:fixed; bottom:70px;
+	background:white;
+	border-radius:5px;
+	box-shadow:0 0 5px black;
+	right:calc(((100% - 600px) / 2) + 5px);
+}
+footer + a:hover {
+	background:aqua;
+}
