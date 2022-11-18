@@ -159,7 +159,7 @@ figure button {
 
 /*하단*/
 footer {
-	position:fixed; bottom:0; left: -10px;
+	position:fixed; bottom:0;
     background: #1d61fb;
 }
 /*footer span {
