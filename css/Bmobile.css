@@ -45,7 +45,7 @@ header button:first-of-type {  /*햄버거 아이콘 class="material-icons" deha
 	background: none; border: 2px solid red;
 	color: white; /*햄버거는 글씨로 여겨짐*/
 	font-size: 2rem; font-weight: bold;
-	margin-left: 5px; margin-top: -8px;
+	margin-left: 5px; margin-top: -10px;
 }
 header button:last-of-type {   /*하트 entitiy*/
 	float: right;
@@ -53,7 +53,7 @@ header button:last-of-type {   /*하트 entitiy*/
 	background: none; border: 2px solid red;
 	color: white;
 	font-size: 2rem; font-weight: bold;
-	margin-top: -3px;
+	margin-top: -10px;
 }
 
 /*  상단 햄버거아이콘 내비게이션 메뉴  */
