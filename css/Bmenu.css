@@ -139,7 +139,7 @@ main {
 
 /*** 하단 ***/
 footer {
-	position:fixed; bottom:0; left: -10px;
+	position:fixed; bottom:0;
     background: #1d61fb;
 }
 footer>div {
@@ -149,7 +149,7 @@ footer>div {
 }
 footer a { /*footer의 자손(+자식..?)인 a들에 대하여 적용*/
 	border: 2px solid blue;
-	padding: 20px 62pt; text-decoration: none;
+	padding: 20px 60pt; text-decoration: none;
 	color: white;
 }
 footer a.stay {
