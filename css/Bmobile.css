@@ -104,7 +104,6 @@ section>h2 {
 	border-radius:5px;
 	box-shadow:2px 2px 5px black;
 	position: relative;
-	border: 1px solid red;
 }
 #slide img {
 	transition: 0.2s;
@@ -117,7 +116,6 @@ section>h2 {
 /*베스트메뉴 슬라이드*/
 figure>div {
 	overflow: hidden;
-	border: 3px solid red;
 	position: relative;
 }
 figure>p {
