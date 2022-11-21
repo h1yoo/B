@@ -175,7 +175,7 @@ footer>div {
 }
 footer a { /*footer의 자손(+자식..?)인 a들에 대하여 적용*/
 	border: 2px solid blue;
-	padding: 20px 61pt;
+	padding: 20px 60pt;
 	color: white; text-decoration: none;
 }
 footer a.stay {
