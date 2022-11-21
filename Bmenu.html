@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+        <title>5B menu</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="js/Bmenu.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="stylesheet" href="css/Bmenu.css">
+    </head>   
+    <body>
+        <div id="layout">
+            <header id="top">
+				<h1>
+					<button class="material-symbols-outlined">menu</button>
+					<ruby>
+						5<rt>B</rt>
+					</ruby>
+					<!--<button class="material-symbols-sharp">favorite</button>-->
+                    <button class="material-symbols-outlined">favorite</button>
+				</h1>
+				<div id="black">
+					<nav>
+						<ul>
+							<li><a href="#">정보수정</a></li>
+							<li><a href="#">스탬프</a></li>
+							<li><a href="#">이벤트</a></li>
+							<li><a href="#">공지사항</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<main id="menu"> <!--메뉴부분 시작-->
+                <nav id="left">  <!--메뉴 네비게이션-->
+                    <ol>
+						<li><a href="#non" class="non">non-alcohol</a></li>
+						<li>
+                            <a href="#">cocktail</a>
+                            <nav>
+								<a href="#Lv1" class="Lv1">Lv.1</a>
+								<a href="#Lv2" class="Lv2">Lv.2</a>
+								<a href="#Lv3" class="Lv3">Lv.3</a>
+							</nav>
+                        </li>
+						<li><a href="#">Bottle</a></li>
+						<li><a href="#">glass</a></li>
+						<li><a href="#">안주</a></li>
+					</ol>
+                </nav>
+                <div id="right">  <!--메뉴 이미지&설명-->
+                    <div id="non">
+                        <h4>non-alcohol</h4>
+                        <hr>
+                        <div>
+                            <section> <!--#non에 <div>에서 <section> 하나 당 메뉴 하나-->
+                                <div>
+                                    <img src="images/cola.jpg">
+                                    <button class="material-symbols-outlined">favorite</button>
+                                </div>
+                                <div class="m">
+                                    <div id="NnP">
+                                        <b>콜라</b>
+                                        <span>1000원</span>
+                                    </div>
+                                    <hr>
+                                    <span>코카콜라</span>
+                                </div>
+                            </section>
+                            <section> <!--#non에 <div>에서 <section> 하나 당 메뉴 하나-->
+                                <div >
+                                    <img src="images/juice.jpg">
+                                    <button class="material-symbols-outlined">favorite</button>
+                                </div>
+                                <div class="m">
+                                    <div id="NnP">
+                                        <b>쥬스</b>
+                                        <span>2000원</span>
+                                    </div>
+                                    <hr>
+                                    <span>오렌지쥬스 & 포도쥬스</span>
+                                </div>
+                            </section>
+                        </div>
+                    </div>  <!--#non 메뉴 끝-->
+                    <div id="Lv1">
+                        <h4>Lv.1</h4>
+                        <hr>
+                        <div>
+                            <section> <!--#non에 <div>에서 <section> 하나 당 메뉴 하나-->
+                                <div>
+                                    <img src="images/cola.jpg">
+                                    <button class="material-symbols-outlined">favorite</button>
+                                </div>
+                                <div class="m">
+                                    <div id="NnP">
+                                        <b>잭콕</b>
+                                        <span>7000원</span>
+                                    </div>
+                                    <span>잭다니엘과 콜라를 섞어 만든 칵테일</span>
+                                </div>
+                            </section>
+                        </div>
+                    </div> <!--#Lv1 메뉴 끝-->
+                    <div id="Lv2">
+                        <h4>Lv.2</h4>
+                        <hr>
+                        <div>
+                            <section> <!--#non에 <div>에서 <section> 하나 당 메뉴 하나-->
+                                <div>
+                                    <img src="images/cola.jpg">
+                                    <button class="material-symbols-outlined">favorite</button>
+                                </div>
+                                <div class="m">
+                                    <div id="NnP">
+                                        <b>콜라</b>
+                                        <span>1000원</span>
+                                    </div>
+                                    <span>코카콜라</span>
+                                </div>
+                            </section>
+                        </div>
+                    </div>  <!--#Lv2 메뉴 끝-->
+                    <div id="Lv3">
+                        <h4>Lv.3</h4>
+                        <hr>
+                        <div>
+                            <section> <!--#non에 <div>에서 <section> 하나 당 메뉴 하나-->
+                                <div>
+                                    <img src="images/cola.jpg">
+                                </div>
+                                <div class="m">
+                                    <div id="NnP">
+                                        <b>콜라</b>
+                                        <span>1000원</span>
+                                    </div>
+                                    <span>코카콜라</span>
+                                </div>
+                            </section>
+                        </div>
+                    </div> <!--#Lv3 메뉴 끝-->
+                </div>  <!--#right 끝-->
+            </main>     <!--메뉴부분 끝-->
+            <footer>
+                <div>
+                    <a href="#" class="stay">home</a>
+                    <a href="#">menu</a>
+                    <a href="#">plus</a>
+                </div>
+            </footer>
+            <!--<a href="#top" class="material-icons">keyboard_arrow_up</a>  이 top 아이콘은 js로 코딩 안해도 top:0;으로 가는 기능이 있나봄!-->
+        </div>
+    </body>
+</html>
